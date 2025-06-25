@@ -42,7 +42,7 @@ pip install -r requirements.txt
 ### 🧠 Démarrer Ollama avec un modèle :
 
 ```bash
-ollama run llama3
+ollama run llama3.2:1b
 ```
 
 ---
