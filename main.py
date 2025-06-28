@@ -1,6 +1,7 @@
 from generator_password import generate_password
 from utils import validate_length, copy_in_paper_clip
-from llm_assistant import ask_advice_context
+# from llm_assistant import ask_advice_context
+from hf_assistant import generate_passphrase_from_context
 from passphrase_transformer import transformer_passphrase
 
 def main():
@@ -10,7 +11,8 @@ def main():
     if mode_ia:
         contexte = input("Contexte d'utilisation ?\n> ")
         try:
-            base = ask_advice_context(contexte)
+            # base = ask_advice_context(contexte)
+            base = generate_passphrase_from_context(contexte)
             secure = transformer_passphrase(base)
             print("\n🤖 Phrase générée :")
             print("BASE :", base)
