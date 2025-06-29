@@ -56,6 +56,7 @@ python main.py
 Vous aurez alors le choix :
 - Mode classique : génération de mot de passe personnalisée
 - Mode IA : génération d'une passphrase par IA puis transformation sécurisée
+- Mode Historique : Sauvegarde ses mdp dans un fichier securisé avec un chiffrement AES 128 bits et accessible
 
 ---
 
@@ -66,6 +67,9 @@ Vous aurez alors le choix :
 - Copie automatique dans le presse-papier (optionnelle)
 - Génération de passphrase via un LLM local
 - Transformation aléatoire et sécurisée de la passphrase
+- Sauvegarde locale **chiffrée** des mots de passe générés (avec clé maître)
+- Consultation de l'historique sécurisé
+- Fichier `.json.enc` chiffré avec `cryptography.fernet`
 
 ---
 
