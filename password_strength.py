@@ -2,7 +2,7 @@ from zxcvbn import zxcvbn
 import string
 
 def evaluate_password_strength(password):
-    result = zxcvbn(password)
+    result = zxcvbn(password[:72])
     score = result["score"]
     feedback = result.get("feedback", {})
 
