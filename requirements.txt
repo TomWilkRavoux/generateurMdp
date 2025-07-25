@@ -2,4 +2,4 @@ transformers
 torch
 zxcvbn
 pyperclip
-cryptography
+pyAesCrypt

@@ -39,7 +39,8 @@ def main():
 
                     if input("Sauvegarder cette passphrase ? (o/n) ").lower() == "o":
                         label = input("Nom ou usage de ce mot de passe : ")
-                        save_password(label, secure)
+                        master = input("Entrez votre mot de passe maître : ")
+                        save_password(label, secure, master)
 
                 except Exception as e:
                     print("❌ Erreur :", e)
@@ -69,11 +70,14 @@ def main():
 
                 if input("Sauvegarder ce mot de passe ? (o/n) ").lower() == "o":
                     label = input("Nom ou usage de ce mot de passe : ")
-                    save_password(label, mot_de_passe)
+                    master = input("Entrez votre mot de passe maître : ")
+                    save_password(label, mot_de_passe, master)
 
         elif choix == "2":
             print("\n📂 Historique des mots de passe :")
-            data = load_passwords()
+            master = input("Entrez votre mot de passe maître : ")
+            data = load_passwords(master)
+
             if not data:
                 print("Aucun mot de passe enregistré.")
             else:
